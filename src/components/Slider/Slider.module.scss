@@ -83,7 +83,7 @@ $text: #eee;
     justify-content: center;
     position: absolute;
     bottom: 32px;
-    left: 50%;
+    left: calc(50% - 72px / 2);
 
     .item{
       width: 8px;
