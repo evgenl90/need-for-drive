@@ -14,19 +14,21 @@ const  Main = () => {
                     <p  className={style.location_city}>Ульяновск</p>
                 </div>
             </div>
-            <h1 className={style.title}>
-                Каршеринг
-                <br />
-                <span>
-                    Need for drive
-                </span>
-            </h1>
-            <p className={style.text}>
-                Поминутная аренда авто твоего города
-            </p>
-            <button className={style.btn}>
-                Забронировать
-            </button>
+            <div className={style.content}>
+                <div className={style.title}>
+                    <p>Каршеринг</p> 
+                    <h1>Need for drive</h1>
+                </div>
+                
+                
+                <p className={style.text}>
+                    Поминутная аренда авто твоего города
+                </p>
+                <button className={style.btn}>
+                    Забронировать
+                </button>
+            </div>
+            
             <div className={style.footer}>
                 <div className={style.copy}>
                     © 2016-2019 «Need for drive»

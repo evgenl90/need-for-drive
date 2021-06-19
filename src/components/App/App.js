@@ -13,10 +13,7 @@ function App() {
         <Main />
         <Slider />
       </div>
-      
-
-
-    
+       
   );
 }
 

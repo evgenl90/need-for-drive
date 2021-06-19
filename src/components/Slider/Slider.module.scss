@@ -1,100 +1,208 @@
 $font: Roboto;
-$text: #eee;
+$light-gray: #eee;
+$medium: 500;
 
-.slider{
-  flex: none;
-  width: 45%;
-  position: relative;
-  font-family: $font;
-  padding: 237px 0 374px;
-  background: url(../../assets/img/slide1.jpg) no-repeat;
-  background-size: cover;
-
-  @media (max-width: 1440px) { 
-   width: 688px;
-  }
-  .slider_title, .slider_text, .slider_btn{
-    margin-left: 96px;
-    margin-right: 96px;
-  }
-  .slider_title{
-    color: #fff;
-    font-size: 40px;
-    line-height: 47px;
-    margin-bottom: 8px;
-    
-    @media (min-width: 1440px) { 
-      margin-top: 64px;
-    }
-  }
-  .slider_text{
-    color: $text;
-    font-size: 24px;
-    line-height: 90%;
-    color: $text;
-  }
-  .slider_btn{
-    margin-top: 32px;
-    background: linear-gradient(90deg, #13493F 0%, #0C7B1B 100%);
-    border-radius: 4px;
-    width: 164px;
-    height: 48px;
-    border: none;
-    font-size: 18px;
-    line-height: 21px;
-    align-items: center;
-    text-align: center;
-    color: $text;
-    cursor: pointer;
-    color: $text;
-  }
-
-  .prev, .next{
-    height: 100%;
-    position: absolute;
-    top: 0;
-    width: 64px;
-  }
-  .prev:hover, .next:hover{
-    background: #0EC261;
-    opacity: 0.2;
-    cursor: pointer;
-  }
-  .prev{
-    left: 0; 
-  }
-  .next{
-    right: 0;
-  }
-
-  .arrow_prev{
-    position: absolute;
-    top: 49%;
-    left:27px;
-  }
-  .arrow_next{
-    position: absolute;
-    top: 49%;
-    right:27px;
-  }
-
-  .radio_control{
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 32px;
-    left: calc(50% - 72px / 2);
-
-    .item{
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #fff;
-      margin: 0 4px;
-      cursor: pointer;
-    }
-    .active{
-      background: #0EC261;;
-    }
-  }
+@mixin buttonColor($main-color, $secondary-color, $text-color) {
+    background: linear-gradient(90deg, $main-color 2.61%, $secondary-color 112.6%);
+    background-blend-mode: darken;
+    color: $text-color;
 }
+
+
+.slider {
+    flex: 1 2 688px;
+    overflow: hidden;
+    position: relative;
+
+
+    @media screen and (max-width: 1360px) {
+        .title{
+            font-size: 32px;
+        }
+        .text{
+            font-size: 22px;
+        }
+    }
+    @media screen and (max-width: 1020px) {
+        display: none;
+    }
+    .content {
+        height: 100%;
+        display: flex;
+
+        @media (max-width: 1440px) { 
+            padding-bottom: 374px;
+        }  
+        @media (max-width: 1360px) { 
+            padding-bottom: 261px;
+        }      
+    }
+
+    .item {
+        padding-left: 96px;
+        padding-right: 96px;
+        padding-top: 237px;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .title{
+        color: #fff;
+        font-size: 40px;
+        line-height: 47px;
+        margin-bottom: 8px;
+        font-weight: $medium;
+
+        @media (min-width: 1440px) { 
+            margin-top: 64px;
+        }
+    }
+
+    
+    .text{
+        color: $light-gray;
+        font-size: 24px;
+        line-height: 90%;
+        font-family: $font;
+        font-weight: 300;
+    }
+
+    .btn{
+        margin-top: 32px;
+        border-radius: 4px;
+        width: 164px;
+        height: 48px;
+        border: none;
+        font-size: 18px;
+        line-height: 21px;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        color: $light-gray;
+    }
+    .btn_first{
+        @include buttonColor(hsla(169, 58%, 18%, 1), hsla(128, 83%, 26%, 1), #fff);
+
+        &:hover,
+        &:active {
+            @include buttonColor(hsla(169, 58%, 8%, 1), hsla(128, 83%, 16%, 1), #fff);
+        }
+    }
+
+    .btn_second {
+        @include buttonColor(hsl(216, 59%, 18%), hsl(169, 82%, 26%), #fff);
+
+        &:hover,
+        &:active {
+            @include buttonColor(hsl(216, 59%, 8%), hsl(169, 82%, 16%), #fff);
+        }
+    }
+
+    .btn_third {
+        @include buttonColor(hsl(32, 59%, 18%), hsl(335, 82%, 26%), #fff);
+
+        &:hover,
+        &:active {
+             @include buttonColor(hsl(32, 59%, 8%), hsl(335, 82%, 16%), #fff);
+        }
+    }
+
+    .btn_fourth {
+        @include buttonColor(hsl(263, 59%, 18%), hsl(295, 82%, 26%), #fff);
+
+        &:hover,
+        &:active {
+            @include buttonColor(hsl(263, 59%, 8%), hsl(295, 82%, 16%), #fff);
+        }
+    }
+
+    .arrow {
+        z-index: 50;
+        cursor: pointer;
+        position: absolute;
+        content: "";
+        width: 64px;
+        height: 100%;
+        border: none;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background-color: rgba(14, 194, 97, 0.2);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+    
+
+    .arrow_prev {
+        top: 0;
+        left: 0;
+    }
+
+    .arrow_next {
+        top: 0;
+        right: 0;
+    }
+
+    .radio_controls {
+        position: absolute;
+        content: "";
+        bottom: 32px;
+        left: calc(50% - 72px / 2);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .radio {
+        cursor: pointer;
+        margin-left: 8px;
+        width: 12px;
+        height: 12px;
+        border: none;
+        border-radius: 50%;
+        background-color: white;
+
+        .radio:nth-child(1) {
+            margin-left: 0;
+        }
+    }
+
+    .radio_active {
+        background-color: #0EC261;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .slider {
+        .title {
+            font-size: 32px;
+            line-height: 37px;
+        }
+
+        .text {
+            font-size: 22px;
+            line-height: 22px;
+        }
+
+        .arrow {
+            width: 32px;
+        }
+
+        .item {
+            padding-left: 64px;
+            padding-right: 64px;
+        }
+    }
+}
+
