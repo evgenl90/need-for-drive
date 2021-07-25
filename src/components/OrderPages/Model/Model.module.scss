@@ -1,0 +1,66 @@
+.main_order{
+    display: flex;
+    justify-content: space-between;  
+    .model_container{
+        padding: 32px 0 48px 64px;
+        .radio{
+            display: flex;
+            justify-content: flex-start;
+            padding-bottom: 48px ;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            color: #121212;
+
+            div{
+                display: flex;
+                align-items: center;
+                img{
+                    margin-right: 8px;
+                }
+                label{
+                    margin-right: 16px;
+                }
+            }
+        }
+        .cars{
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 21px;
+            color: #121212;
+            .car{
+                width: 368px;
+                height: 224px;
+                border: 1px solid #EEEEEE;
+                box-sizing: border-box;
+                padding: 16px;
+                position: relative;
+                cursor: pointer;
+                h3{
+                    font-size: 18px;
+                }
+                p{
+                    font-size: 14px;
+                    color: #999999;
+                }
+                img{
+                    position: absolute;
+                    bottom: 16px;
+                    right: 16px;
+                }
+            }
+            .car:hover{
+                border: 1px solid #999999;
+            }
+            .car_active, .car_active:hover{
+                border: 1px solid #0EC261;
+            }
+        }
+    }
+}

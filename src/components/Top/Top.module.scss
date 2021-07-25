@@ -1,0 +1,49 @@
+$font: Roboto;
+$green: #0EC261;
+$gray_text: #999;
+
+
+.top{
+  display: flex;
+  //flex-direction: row;
+  justify-content: space-between;
+  //align-items: center;
+  margin-top: 32px;
+  //height: 96px;
+  padding: 0 64px;
+
+  .location{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+
+    img{
+      margin-right: 8px;
+    }
+    .location_city{
+      font-family: $font;
+      font-size: 14px;
+      color: $gray_text;
+    }
+  }
+  .top_logo{
+    color: $green;
+    font-family: $font;
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 592px) { 
+  .top{
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 16px;
+    margin-right: 16px;
+    .location_city{
+      margin-top: 8px;
+      line-height: 16px;
+    }
+  }
+}
+

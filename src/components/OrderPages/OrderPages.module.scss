@@ -1,0 +1,27 @@
+.order_page{
+    display: block;
+    width: 100%;  
+}
+.orderBtn{
+    background: linear-gradient(90deg, #0ec462 2.61%, #03a066 112.6%);
+    border-radius: 8px;
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    margin-top: 32px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.orderBtn:hover{
+    background: linear-gradient(90deg, #03a066 112.6%,  #0ec462 2.61%);
+}
+.orderBtn_disable{
+    background: #EEEEEE;
+    pointer-events: none;
+}

@@ -1,19 +1,12 @@
 import React from 'react'
 import style from './Main.module.scss'
-import logo from '../../assets/img/location.svg'
+import Top from '../Top/Top'
+import { NavLink } from 'react-router-dom'
 
 const  Main = () => {
     return (
         <div className={style.main}>
-            <div className={style.top}>
-                <h2 className={style.top_logo}>
-                    Need for drive
-                </h2>
-                <div className={style.location}>
-                    <img src={logo} alt="" />
-                    <p  className={style.location_city}>Ульяновск</p>
-                </div>
-            </div>
+            <Top />
             <div className={style.content}>
                 <div className={style.title}>
                     <p>Каршеринг</p> 
@@ -24,9 +17,11 @@ const  Main = () => {
                 <p className={style.text}>
                     Поминутная аренда авто твоего города
                 </p>
-                <button className={style.btn}>
-                    Забронировать
-                </button>
+                <NavLink to="/orderPages/location" >
+                    <button className={style.btn}>
+                        Забронировать
+                    </button>
+                </NavLink>
             </div>
             
             <div className={style.footer}>

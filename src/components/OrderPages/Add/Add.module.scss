@@ -1,0 +1,93 @@
+.main_order{
+    display: flex;
+    justify-content: space-between;     
+
+    .add_container{
+        padding: 32px 0 0 64px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 16px;
+        color: #999;
+        .radio{
+            display: flex;
+            justify-content: flex-start;
+            margin: 16px 0 32px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            color: #999;
+        
+            .color_item{
+                display: flex;
+                align-items: center;
+            }
+        }
+        .inputs{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            color: #121212;
+            display: flex;
+            justify-content: flex-start;
+            margin: 16px 0 32px;
+            
+            div{
+                .city, .point{
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    margin-bottom: 13px;
+                    input{
+                        width: 224px;
+                        border: none;
+                        border-bottom: 1px solid #999999;
+                        margin-left: 8px;
+                        padding: 3px 8px;
+                    }
+                    .input:focus{
+                        border: none;
+                        border-bottom: 1px solid #999999;
+                    }
+                    img{
+                        position: relative;
+                        right: 16px;
+                        bottom: 3px;
+                        cursor: pointer;
+                    }
+                    .show_close{
+                        opacity: 1;
+                        cursor: pointer;
+                    }
+                    .hidden_close{
+                        opacity: 0;
+                        cursor: none;
+                    }
+                }
+            } 
+        }
+        .radio_tarif{
+            margin: 16px 0 24px 0;
+            display: block;
+            div{
+                display: flex;
+                align-items: center;
+                margin-bottom: 8px;
+                label{
+                    margin-right: 16px;
+                }
+            }
+        }
+        .add_services{
+            padding-top: 16px;
+            div{
+                margin-bottom: 8px;
+            }
+        }
+    }
+}

@@ -7,6 +7,7 @@ import telegram from '../../assets/img/telegram.svg'
 import facebook from '../../assets/img/facebook.svg'
 import instagram from '../../assets/img/instagram.svg'
 
+
 const  Navbar = () => {
 
     const [menuOpened, setMenuOpened] = useState(false)

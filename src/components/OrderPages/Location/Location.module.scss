@@ -1,0 +1,62 @@
+.main_order{
+    display: flex;
+    justify-content: space-between;     
+    .location{
+        padding: 32px 0 0 64px;      
+        .inputs{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            color: #121212;
+            display: flex;
+            justify-content: flex-start;
+            
+            div{
+                .city, .point{
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-bottom: 13px;
+                    input{
+                        width: 224px;
+                        border: none;
+                        border-bottom: 1px solid #999999;
+                        margin-left: 8px;
+                        padding: 3px 8px;
+                    }
+                    .input:focus{
+                        border: none;
+                        border-bottom: 1px solid #999999;
+                    }
+                    input::-webkit-calendar-picker-indicator {      
+                        opacity: 0;  
+                    }
+                    img{
+                        position: relative;
+                        right: 16px;
+                        bottom: 3px;
+                        cursor: pointer;  
+                        
+                    }
+                    .show_close{
+                        opacity: 1;
+                        cursor: pointer;
+                    }
+                    .hidden_close{
+                        opacity: 0;
+                        cursor: none;
+                    }
+                }
+            } 
+        }  
+        .map{
+            margin-top: 45px;
+            p{
+                margin-bottom: 16px;
+                font-family: Roboto;
+                color: #121212;
+            }
+        }
+    }
+}

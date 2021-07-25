@@ -1,0 +1,54 @@
+
+@value colors: "../../../assets/variables.scss";
+@value main-accent, main-black, black-background, dark-gray, light-gray  from colors;
+
+
+.navigation {
+    border-top: 1px solid light-gray;
+    border-bottom: 1px solid light-gray;
+    margin-top: 32px;
+
+    .list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top: 8px;
+        padding-bottom: 7px;
+        padding-left: 64px;
+        padding-right: 64px;
+        margin: 0 auto;
+    }
+    img{
+        margin: 0 16px;
+    }
+    .item {
+        a {
+            text-decoration: none;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 16px;  
+            color: #999999; 
+            pointer-events: none;    
+        }
+    }
+    .active_link{
+        a{
+            color: #0EC261;
+            pointer-events: visible
+        }
+        
+    }
+    .unlocked {
+        a{
+            color: #121212;
+            pointer-events: visible;    
+        }
+    }
+}
+
+
+
+
+
